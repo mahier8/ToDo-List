@@ -62,6 +62,7 @@ form button:hover {
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
+    border-radius: 5px;
 }
 
 .todo li {

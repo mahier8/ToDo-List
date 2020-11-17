@@ -24,10 +24,12 @@ function addToDo (event) {
     // create Li
     const newTodo = document.createElement('li');
     newTodo.innerText = todoInput.value;
+    // save to local
+    saveLocalTodos(todoInput.value);
+    //
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo); 
-    // Add todo to localstorage
-    saveLocalTodos(todoInput.value);
+    todoInput.value = '';
     // check mark button
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
@@ -41,7 +43,7 @@ function addToDo (event) {
     // Append to list
     todoList.appendChild(todoDiv);
     // Clear todo input value
-    todoInput.value = '';
+    
 }
 
 function deleteCheck (event) {
